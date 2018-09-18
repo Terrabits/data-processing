@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Assuming image data:1.0 is available in docker:
+kubectl run data --image=data:1.0 --port=5000
+kubectl scale --replicas=4 deployment/data
+kubectl expose deployment data --type="NodePort" --name data

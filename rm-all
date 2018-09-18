@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+kubectl delete service data
+kubectl delete deploy  data
+
+set -e
+eval $(minikube docker-env)
+docker image rm data:1.0

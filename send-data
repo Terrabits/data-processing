@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# removed --verbose
+curl --request GET --header "Content-Type: text" --data "Hey there server" $(minikube service data --url)
